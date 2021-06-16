@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import Sequelize from 'sequelize';
 import mongoose from 'mongoose';
 
@@ -26,7 +27,8 @@ class Database {
 	mongo() {
 		this.mongoConnection = mongoose.connect('mongodb://localhost:27017/gobarber', {
 			useNewUrlParser: true,
-			useFindAndModify: true
+			useFindAndModify: true,
+			useUnifiedTopology: true
 		});
 	}
 }
